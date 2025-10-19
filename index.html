@@ -5,26 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taller 1 TS</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        .series-details {
+            margin-top: 20px;
+        }
+        .series-image {
+            max-width: 300px;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <h1>Series</h1>
-            <table class="table table-striped">
-                <thead class="white">
-                    <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Channel</th>
-                    <th>Seasons</th>
-                    </tr>
-                </thead>
-                <tbody id="series"></tbody>
-            </table>
-            <div class="row">
-                <p><strong>Seasons average: </strong></p>
-                <p id="promedio-seasons"></p>
+            <div class="col-8">
+                <h1>Series</h1>
+                <table class="table table-striped">
+                    <thead class="white">
+                        <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Channel</th>
+                        <th>Seasons</th>
+                        </tr>
+                    </thead>
+                    <tbody id="series"></tbody>
+                </table>
+                <div class="row">
+                    <p><strong>Seasons average: </strong></p>
+                    <p id="promedio-seasons"></p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div id="series-details" class="series-details" style="display: none;">
+                    <img id="series-image" class="series-image img-fluid mb-3" src="" alt="Series Image">
+                    <h4 id="series-title"></h4>
+                    <p id="series-descripcion" class="text-justify"></p>
+                    <a id="series-link" href="" target="_blank" class="btn btn-primary">Visit Official Site</a>
+                </div>
             </div>
         </div>
     </div>
