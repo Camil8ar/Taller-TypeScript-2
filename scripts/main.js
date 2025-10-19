@@ -14,17 +14,13 @@ function renderSeriesInTable(series) {
         var trElement = document.createElement("tr");
         trElement.innerHTML = "<td>".concat(serie.id, "</td>\n                           <td class=\"series-name\" style=\"cursor: pointer; color: blue; text-decoration: underline;\">").concat(serie.name, "</td>\n                           <td>").concat(serie.channel, "</td>\n                           <td>").concat(serie.seasons, "</td>");
         seriesTbody.appendChild(trElement);
-        // Add click event to the series name
         var seriesNameCell = trElement.querySelector('.series-name');
         seriesNameCell.addEventListener('click', function () { return showSeriesDetails(serie); });
     });
 }
 function showSeriesDetails(serie) {
-    // Show the details container
     seriesDetailsContainer.style.display = 'block';
-    // Populate the details
     seriesImage.src = serie.fotoURL;
-    seriesImage.alt = serie.name;
     seriesTitle.textContent = serie.name;
     seriesDescription.textContent = serie.descripcion;
     seriesLink.href = serie.sitioURL;

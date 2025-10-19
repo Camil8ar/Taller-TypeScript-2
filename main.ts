@@ -24,19 +24,15 @@ function renderSeriesInTable(series: Serie[]): void {
                            <td>${serie.seasons}</td>`;
     seriesTbody.appendChild(trElement);
 
-    // Add click event to the series name
     const seriesNameCell = trElement.querySelector('.series-name')!;
     seriesNameCell.addEventListener('click', () => showSeriesDetails(serie));
   });
 }
 
 function showSeriesDetails(serie: Serie): void {
-  // Show the details container
   seriesDetailsContainer.style.display = 'block';
   
-  // Populate the details
   seriesImage.src = serie.fotoURL;
-  seriesImage.alt = serie.name;
   seriesTitle.textContent = serie.name;
   seriesDescription.textContent = serie.descripcion;
   seriesLink.href = serie.sitioURL;
